@@ -1,0 +1,129 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#wrapper {
+    background-image: linear-gradient(30, 20, 18);
+    width: 970px;
+    padding: 10px;
+}
+
+#header {
+    min-height: 40px;
+    background-color: palevioletred;
+    padding: 20px;
+}
+
+p.izq {
+    font-family: unset;
+    font-weight: bold;
+    float: left;
+    font-size: 30px;
+}
+
+p.der {
+    float: right;
+    font-size: 22px;
+    font-weight: bold;
+    float: right;
+}
+
+#principal {
+    background: linear-gradient(to right, #815a6e, #6d2f4e, #81223a);
+    width: 970px;
+    height: auto;
+}
+
+#linea1 {
+    border: 5px solid rgb(180, 111, 111);
+    margin: 10px 15px 10px 10px;
+    display: inline-block;
+}
+
+#foto {
+    width: 380px;
+}
+
+#linea2 {
+    border: 1px solid;
+    height: 260px;
+    width: 500px;
+    vertical-align: top;
+    background: linear-gradient(to right, white, #6F5964);
+    display: inline-block;
+    margin: 10px 15px 10px 0;
+}
+
+div.titulo {
+    color: white;
+    font-weight: bold;
+    padding: 10px 10px 10px 10px;
+    background: linear-gradient(180deg, darkgray, gray, darkgray);
+}
+
+p.sobre {
+    display: block;
+    padding: 8px;
+}
+
+div.caja {
+    display: inline-block;
+    background: linear-gradient(to right, white, #6F5964);
+    height: 550px;
+    width: 290px;
+    vertical-align: top;
+    margin: 9px;
+    border: 1px solid;
+}
+
+div.cajatexto {
+    height: 155;
+    margin: 5px;
+}
+
+img.fotos {
+    width: 290px;
+}
+
+img.logo {
+    width: 40px;
+    margin: 7px;
+}
+
+#footer {
+    min-height: 60px;
+    background-color: #f0a9e0;
+}
+
+p.pie {
+    vertical-align: top;
+    text-align: center;
+    padding: 4px;
+}
+
+div.cajax {
+    text-align: center;
+    width: 122px;
+    background-color: #ce209a;
+    padding: 5px;
+    box-shadow: 3px 3px 6px black;
+    border-radius: 4px;
+    margin: 5px 0 0 80px;
+}
+
+a.boton {
+    color: rgb(248, 205, 241);
+    font-weight: bold;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+img.icono {
+    width: 21px;
+    margin: 3px;
+}
+
+a.links {
+    vertical-align: top;
+}

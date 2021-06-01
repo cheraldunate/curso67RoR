@@ -36,7 +36,7 @@
     padding: 10px;
 }
 
-.subcontents {
+.cuboamarillo {
     min-height: 200px;
     width: 210px;
     background-color: yellow;
@@ -44,10 +44,10 @@
     display: inline-block;
 }
 
-#advertisement {
+#rectangulomorado {
     min-height: 120px;
     width: 660px;
     background-color: purple;
-    margin-top: 10px;
+    margin-top: 50px;
     margin-left: 5px;
 }
