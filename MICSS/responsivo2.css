@@ -1,0 +1,95 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+@media only screen and (min-width: 1024px) {}
+
+#wrapper {
+    width: 950px;
+    background-color: rgb(175, 166, 166);
+    margin: 0px auto;
+    padding: 15px;
+}
+
+#header {
+    min-height: 150px;
+    background-color: green;
+    margin-bottom: 20px;
+}
+
+#navigation {
+    min-height: 300px;
+    width: 200px;
+    background-color: blue;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+}
+
+#maincontent {
+    min-height: 400px;
+    width: 704px;
+    background-color: red;
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px;
+}
+
+.cuboamarillo {
+    min-height: 200px;
+    width: 210px;
+    background-color: yellow;
+    margin: 5px;
+    display: inline-block;
+}
+
+#rectangulomorado {
+    min-height: 120px;
+    width: 660px;
+    background-color: purple;
+    margin-top: 50px;
+    margin-left: 5px;
+}
+
+@media only screen and (max-width: 480px) {
+    #navigation {
+        display: none;
+    }
+    #maincontent {
+        width: 99%;
+        height: auto;
+    }
+    .cuboamarillo {
+        width: 86%;
+        padding: 5%;
+        vertical-align: auto;
+        margin: 2%;
+        display: inline-block;
+    }
+    #rectangulomorado {
+        width: auto;
+        padding: 8%;
+        vertical-align: auto;
+        margin: 2%;
+    }
+    #header {
+        padding: 7%;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width:1023px) {
+    #navigation {
+        display: none;
+    }
+    .cuboamarillo {
+        width: 48%;
+    }
+    #rectangulomorado {
+        width: auto;
+    }
+    #maincontent {
+        width: 98%;
+        height: auto;
+    }
+}
