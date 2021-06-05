@@ -64,7 +64,9 @@ img.logo {
 }
 
 button {
-    margin-left: 70px;
+    margin-left: 200px;
+    vertical-align: top;
+    margin-top: -20px;
 }
 
 a {
