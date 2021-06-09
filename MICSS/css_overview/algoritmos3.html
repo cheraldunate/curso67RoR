@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmos III ::</title>
+    <script>
+        /*ejercicio 1*/
+        function a(x, y) { //x= 5 ; y= 5;
+            return 5;
+        }
+
+        console.log(a(5, 5)); //console.log(5)
+        //respt.:5
+
+        /*ejercicio 1.1*/
+        function obtenerAlumnoAzar(arreglo) { //arreglo.length = 18
+            //Math.random(), retorna valores entre 0 y 1, sin considerar el 1 
+            //Math.random() * 101 //0-100
+            //Math.floor(), entrega solo la parte entera, elimina los decimales
+            var posicion = Math.floor(Math.random() * arreglo.length); //0-17
+
+            //accedemos por la posicion
+            var apellido = arreglo[posicion];
+
+            console.log("*** La o El elegido es: " + apellido);
+
+        }
+
+        var alumnos = ["Calcumil", "Mella", "Jimenez", "Saquel", "Fernandez",
+            "Pavez", "Minio", "Palma", "Franco", "Gonzalez", "Muñoz", "Flores",
+            "Hernandez", "Tapia", "Alarcon", "Muller", "Aldunate", "Figueroa"
+        ];
+        obtenerAlumnoAzar(alumnos);
+
+        /*ejercicio 2*/
+
+        function a(x, y) { //x =6; y= 8;
+            z = [6, 8, 5]; //arreglo vacio; z.length=0, cantidad de elementos en el arreglo
+            z.push(x); //z.push(6);agrega al final del arreglo
+            z.push(y); //z.push(8);agrega al final del arreglo
+            z.push(5); ////z.push(5);agrega al final del arreglo
+            console.log(z); //console.log([6,8,5]);
+            return z; //return [6,8,5];
+        }
+        b = a(2, 2); //b= [2,2,5];
+        console.log(b); //console.log([2,2,5])
+
+        console.log(a(6, 8)); //console.log([6,8,5])
+
+        //respt.:[2,2,5],[2,2,5],[6,8,5],[6,8,5]
+
+        /*ejercicio 3*/
+        function a(x) { //x=2
+            z = []; //z=[2,2]
+            z.push(x);
+            z.pop();
+            z.push(x);
+            z.push(x);
+            return z; //return [2,2];
+        }
+        y = a(2); //y = [2,2]
+        y.push(5); //y = [2,2,5]
+        console.log(y); //console.log([2,2,5])
+        //respt.:[2,2,5]
+
+        /*ejercicio 4*/
+        function a(x) { //x= [2, 3, 4, 5]
+            //    2  <   3
+            if (x[0] < x[1]) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        b = a([2, 3, 4, 5]) //b= true;
+        console.log(b);
+        //resp.:true
+
+        /*ejercicio 5*/
+        function a(x) { //x=[1,2,3,4];x.length= 4
+
+            for (var i = 0; i < x.length; i++) { //i=4
+                //  x[3]=4 > 0  
+                if (x[i] > 0) {
+                    x[i] = "Coding";
+                }
+            }
+
+            return x; //["Coding","Coding","Coding","Coding"]
+        }
+        console.log(a([1, 2, 3, 4])); //console.log(["Coding","Coding","Coding","Coding"])
+        //resp.:["Coding","Coding","Coding","Coding"]
+
+        /*ejercicio 6*/
+        function a(x) { //x=[5,"Coding","Dojo",4]; x.length= 4
+
+            for (var i = 0; i < x.length; i++) { //i=4
+                //   x[3]=4 >5
+                if (x[i] > 5) {
+                    x[i] = "Coding";
+                } else if (x[i] < 0) { //4 < 0
+                    x[i] = "Dojo";
+                }
+            }
+
+            return x; //return [5,"Coding","Dojo",4]
+        }
+        console.log(a([5, 7, -1, 4])); //console.log([5,"Coding","Dojo",4])
+        //respt.: [5,"Coding","Dojo",4]
+        /*ejercicio 7*/
+        function a(x) { //x=[5, 10]
+            //   5   >   10
+            if (x[0] > x[1]) {
+                return x[1];
+            }
+            return 10;
+        }
+
+        b = a([5, 10]); //b = 10
+        console.log(b); //console.log(10);
+        //resp.:10
+
+        /*ejercicio 8*/
+        function sum(x) {
+            sum = 0;
+            for (var i = 0; i < x.length; i++) {
+                sum = sum + x[i];
+                console.log(sum);
+            }
+            return sum;
+        }
+
+        //resp.:
+        /*ejercicio 9*/
+        /*Analiza los valores de un array y 
+        obtén el promedio (average) de esos valores.*/
+        function printAverage(x) { //x = [1,2,3]; x.length=3
+            var sum = 0; //6
+            //for para recorrer un arreglo  
+            for (let i = 0; i < x.length; i++) { //i=3
+                sum = sum + x[i];
+                //  sum =  3  + x[2];
+                //  sum =  3  +  3; 
+                //  sum = 6;  
+            }
+            /*
+            var promedio = sum / x.length;
+            return promedio;*/
+
+            return sum / x.length;
+        }
+
+        y = printAverage([1, 2, 3]); // y = 
+        console.log(y); // should log 2
+
+        y = printAverage([2, 5, 8]);
+        console.log(y); // should log 5
+
+        /*ejercicio 10*/
+        /*Crea un array con todos los enteros impares 
+        (odd integers) entre 1 y 255 (inclusive)*/
+        function returnOddArray() {
+            let array = [];
+            for (let i = 0; i <= 255; i++) {
+                if (i % 2 != 0) { //el resto distinto de cero (impar)
+                    array.push(i); //agrega al final del arreglo
+                }
+            }
+
+            /* alternativa
+            for(let i=1;i <= 255;i+=2){
+                array.push(i);
+            }*/
+            return array;
+        }
+        y = returnOddArray();
+        console.log(y); // should log [1,3,5,...,253,255]
+
+        /*ejercicio 11*/
+        /*
+        Eleva al cuadrado acada elemento del array y sobre escribelo. 
+        retorna el array.
+        */
+
+        function squareValue(x) { //x= [1, 2, 3]
+            for (let i = 0; i < x.length; i++) {
+                x[i] = x[i] * x[i];
+                //x[i] = Math.pow(x[i],2);
+            }
+            return x;
+        }
+        y = squareValue([1, 2, 3]);
+        console.log(y); // should log [1,4,9]
+
+        y = squareValue([2, 5, 8]);
+        console.log(y); // should log [4,25,64]
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
