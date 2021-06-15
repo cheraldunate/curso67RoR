@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmos 4</title>
+    <script>
+        /*ejercicio 1*/
+        function mayorQueY(array, y) { //
+            var contador = 0;
+            for (var i = 0; i < array.length; i++) {
+                if (array[i] > y) {
+                    contador = contador + 1;
+                }
+            }
+            console.log("la cantidad mayor a y es: " + contador);
+
+        }
+        mayorQueY([4, 2, 6], 1);
+
+        /*ejercicio 2*/
+
+        function maxYMinYProm(array) { //array= [3,4,7,-5]
+            var max = array[0];
+            var min = array[0];
+            var sum = 0;
+
+            for (var i = 0; i < array.length; i++) {
+                sum = sum + array[i];
+
+
+                if (array[i] > max) {
+                    max = array[i];
+                }
+
+                if (array[i] < min) {
+                    min = array[i];
+                }
+            }
+            console.log("El promedio es: " + sum / array.length);
+            console.log("El número máximo es: " + max);
+            console.log("El número minimo es: " + min);
+        }
+        maxYMinYProm([3, 4, 7, -5]);
+
+
+
+
+        /*ejercicio3*/
+
+        function reemplazarNegativos(array) {
+            var nuevoArray = [];
+
+            for (var i = 0; i < array.length; i++) {
+
+                if (array[i] < 0) {
+                    nuevoArray.push("Dojo");
+                } else {
+                    nuevoArray.push(array[i]);
+                }
+            }
+
+            return nuevoArray;
+        }
+        console.log(reemplazarNegativos([1, 2, -3, -5, 5]));
+
+        /*ejercicio4*/
+
+        function removerRango(array, rangoInicio, rangoFin) {
+            var newArray = [];
+
+            for (var i = 0; i < array.length; i++) {
+                if (i < rangoInicio || i > rangoFin) {
+                    newArray.push(array[i]);
+                }
+            }
+
+            return newArray;
+        }
+
+        var retorno = removerRango([20, 30, 40, 50, 60, 70], 2, 4);
+        console.log(retorno);
+
+
+
+        <
+        /html>
