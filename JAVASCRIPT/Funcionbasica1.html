@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funcionbasica1</title>
+
+
+    13/15 correctas
+
+    <script>
+        /*ejercicio1*/
+        function a() {
+            return 35;
+        }
+        console.log(a())
+        r: 35
+
+        /*ejercicio2*/
+        function a() {
+            return 4;
+        }
+        console.log(a() + a());
+        r: 8
+
+        /*ejercicio3*/
+        function a(b) {
+            return b;
+        }
+        console.log(a(2) + a(4));
+        r: 6
+
+        /*ejercicio4*/
+        function a(b) {    
+            console.log(b);
+            return b * 3;
+        }
+        console.log(a(3));
+
+        R: 3, 9
+
+        /*ejercicio5*/ ///////////////----PORQUE SE IGNORA EL PRIMER CONSOLE.LOGDEB
+        function a(b) {
+            return b * 4;
+            console.log(b);
+        }
+        console.log(a(10));
+        R: 40
+
+        /*ejercicio6*/ //////// EL RETURN ES A B, O A LA FUNCION...
+        function a(b) { // b = 15
+            if (b < 10) {
+                return 2;
+            }    
+            else {
+                return 4;
+            }
+            console.log(b);
+        }
+        console.log(a(15));
+
+        R: 4
+
+        /*ejercicio7*/
+        function a(b, c) { //b=3 C=10
+            return b * c; //30
+        }
+        console.log(10, 3);
+        console.log(a(3, 10));
+
+        R: 10, 3 - 30
+
+        /*ejercicio8*/
+        function a(b) {
+            for (var i = 0; i < 10; i++) {
+                console.log(i);
+            }
+            return i;
+        }
+        console.log(3);
+        console.log(4);
+        R: 3, 4
+
+        /*ejercicio9*/
+        function a() {
+            for (var i = 0; i < 10; i++) {
+                i = i + 2;
+                console.log(i);
+            }
+        }
+        a();
+        r: 2, 5, 8, 11.
+
+        /*ejercicio10*/
+        function a(b, c) { //b=0 c=10
+            for (var i = b; i < c; i++) {
+                console.log(i);
+            }
+            return b * c;
+        }
+        a(0, 10);
+        console.log(a(0, 10));
+        r: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0
+
+        /*ejercicio11*/ ////////undefined
+        function a() {
+            for (var i = 0; i < 10; i++) {
+                for (var j = 0; j < 10; j++) {
+                    console.log(j);
+                }
+                console.log(i);
+            }
+        }
+
+        r:
+            /*ejercicio12*/ ///////undefined
+            function a() {
+                for (var i = 0; i < 10; i++) {
+                    for (var j = 0; j < 10; j++) {
+                        console.log(i, j);
+                    }
+                    console.log(j, i);
+                }
+            }
+        r:
+            /*ejercicio13*/
+            var z = 10;
+
+        function a() {
+            var z = 15;
+            console.log(z);
+        }
+        console.log(z);
+
+        r: 10
+
+        /*ejercicio14*/
+        var z = 10;
+
+        function a() {
+            var z = 15;
+            console.log(z);
+        }
+        a();
+        console.log(z);
+        r: 15, 10
+
+        /*ejercicio15*/
+        var z = 10;
+
+        function a() {
+            var z = 15;
+            console.log(z);
+            return z;
+        }
+        z = a();
+        console.log(z);
+        r: 15, 15
