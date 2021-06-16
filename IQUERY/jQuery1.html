@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<script>
+    $(document).ready(function() {
+                //estructura base jquery --> $('').accion(function(){});
+                //click
+                $('#boton1').click(function() {
+                    alert("Click en el boton 1")
+                });
+                //hide
+                $('#boton2').click(function() {
+                    $('#parrafo2').hide();
+                });
+                //show
+                $('#boton3').click(function() {
+                    $('#parrafo2').show();
+                });
+                //toggle
+                $('#boton4').click(function() {
+                    $('#parrafo2').toggle(); //oculta o muestra un elemento
+                });
+                //slidedown
+                $('#boton5').click(function() {
+                    $('#parrafo3').slideDown();
+                }); //slideup
+                $('#boton6').click(function() {
+                    $('#parrafo3').slideDown();
+                });
+                //slide toogle
+                $('#boton7').click(function() {
+                    $('#parrafo3').slidetoogle();
+                }); //fadeout
+                $('#boton8').click(function() {
+                    $('#parrafo4').fadeOut();
+                }); //fadein
+                $('#boton9').click(function() {
+                    $('#parrafo4').fadeIn();
+                });
+                //addclass
+                $('#boton10').click(function() {
+                    $('#parrafo5').addClass();
+                });
+                //before
+                $('#boton11').click(function() {
+                    $('#parrafo6').before("a");
+                });
+                //after
+                $('#boton12').click(function() {
+                    $('#parrafo6').after("b");
+                });
+
+                //.append
+                $('#boton13').click(function() {
+                    $('#parrafo7').append();
+                });
+                //.html 
+                $('#boton14').click(function() {
+                    $('#parrafo8').html();
+
+                });
+                //.attr
+                $('#boton15').click(function() {
+                    $('#parrafo8').attr();
+
+                });
+                //.val
+                $('#boton16').click(function() {
+                    $('#parrafo8').val();
+
+                });
+                //.text
+                $('#boton17').click(function() {
+                    $('#parrafo8').val();
+
+                });
+</script>
+
+<body>
