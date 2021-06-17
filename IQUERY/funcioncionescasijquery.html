@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            //estructura base jquery --> $('').accion(function(){});
+            //click
+            $('#boton1').click(function() {
+                alert("Click en el boton 1")
+            });
+            //hide
+            $('#boton2').click(function() {
+                $('#parrafo2').hide();
+            });
+            //show
+            $('#boton3').click(function() {
+                $('#parrafo2').show();
+            });
+            //toggle
+            $('#boton4').click(function() {
+                $('#parrafo2').toggle(); //oculta o muestra un elemento
+            });
+            //slideDown, efecto deslizante hacia abajo, a velocidad de milisegundos(5seg=5000)
+            $("#barraparadeslizar1").click(function() {
+                $("#panel").slideDown(5000);
+            });
+            //slideUp efecto deslizantea hacia arriba
+            $("#barraparadeslizar1").click(function() {
+                $("#panel").slideUp(2000);
+            });
+
+            //slideToggle, desliza hacia abajo o hacia arriba
+            $("#barraparadeslizar2").click(function() {
+                $("#panel1").slideToggle();
+            });
+
+
+            //fadein   
+            $("#boton55").click(function() {
+                $("#div1").fadeIn("slow");
+
+            });
+
+            //fadeout
+            $("#boton66").click(function() {
+                $("#div2").fadeOut("slow");
+            });
+
+
+            //addClass
+            $('#parrafo3').click(function() {
+                $(this).addClass('colores fondos bg-info mt-2');
+            });
+
+
+            //before--inserta texto antes de un elemento
+            $("#boton9").click(function() {
+                $("#p2").before("<p>Hello world!</p>");
+            });
+
+            //after--inserta texto despues de un elemento
+            $("#botonafter").click(function() {
+                $("p").after("<p> Hello world!</p>");
+
+            });
+            //append-
+
+
+            //ATTRattr () Establece o devuelve atributos / valores de elementos seleccionados
+            $('#parrafo4').click(function() {
+                $('#container').append('<img src=down1.png>')
+                $('img').attr('width', '200px');
+                $('#parrafo4').attr('style', 'color:red;font-size: 25px;');
+                alert($('#parrafo4').attr('id')); //consultar el contenido del atributo
+            });
+
+            //VAL
+            $('#boton5').click(function() {
+                //captura el valor como string
+                var texto1 = $('#text1').val();
+                var texto2 = $('#text2').val();
+
+                //validando si es un numero
+                if (isNaN(texto1)) {
+                    alert("No es un numero, despierta")
+                } else {
+
+                    //convertir a numero
+                    //Number(texto1); parseInt(texto1); parseFloat(texto1);
+                    alert(Number(texto1) + parseInt(texto1) + parseFloat(texto1));
+                    //alert(texto1 + texto2);
+
+                }
+            });
+
+
+
+
+            //fin jquery
+        });
+
+        function beforeText() {
+            var txt1 = "<b>I </b>"; // Create element with HTML
+            var txt2 = $("<i></i>").text("love "); // Create with jQuery
+            var txt3 = document.createElement("b"); // Create with DOM
+            txt3.innerHTML = "jQuery!";
+            $("img").before(txt1, txt2, txt3); // Insert new elements before img
+        }
+
+        function appendText() {
+            //var txt1 = "<p>Text.</p>";        // Create text with HTML
+            //var txt2 = $("<p></p>").text("Text.");  // Create text with jQuery
+            var txt3 = document.createElement("b");
+            txt3.innerHTML = "Text."; // Create text with DOM
+            $("img").append(txt3);
+        }
+        // Append new elements
+    </script>
+    <style>
+        #panel,
+        #barraparadeslizar1 {
+            padding: 5px;
+            text-align: center;
+            background-color: #aebb8a;
+            border: solid 1px #911313;
+        }
+        
+        #panel {
+            padding: 50px;
+            display: none;
+        }
+        
+        #panel1,
+        #barraparadeslizar2 {
+            padding: 5px;
+            text-align: center;
+            background-color: #d1b9cb;
+            border: solid 1px #8b0f62;
+        }
+        
+        #panel1 {
+            padding: 50px;
+            display: none;
+        }
+        
+        .colores {
+            color: red;
+        }
+        
+        .fondos {
+            background-color: rgb(172, 33, 126);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Función Click</h1>
+        <p>clikea el botón para llamar al evento click </p>
+        <button id="boton1">funcion click</button>
+        <hr>
+        <h1>Función Hide,Show y Toggle</h1>
+        <p id="parrafo2">clickea el botón para llamar al evento hide y ocultar el parrafo </p>
+        <button id="boton2">funcion hide</button>
+        <button id="boton3">funcion show</button>
+        <button id="boton4">funcion Toggle</button>
+        <hr>
+        <h1>slideDown, slideUp</h1>
+        <div id="barraparadeslizar1"> Clik para dezlizar el panel</div>
+        <div id="panel">Hola soy un panel deslizante</div>
+        <hr>
+        <h1>slidetoogle</h1>
+        <div id="barraparadeslizar2"> Clik para dezlizar el panel</div>
+        <div id="panel1">Hola soy un panel deslizante</div>
+        <hr>
+        <h1>fadein</h1>
+        <p>ver fadeIn</p>
+        <button id="boton55">Click para mostrar el cuadrado</button>
+        <br><br>
+        <div id="div1" style="width:80px;height:80px;display:none;background-color:rgb(0, 255, 42);"></div><br>
+        <hr>
+        <br>
+
+        <h1>fadeout</h1>
+        <p>ver Para fadeOut()</p>
+        <button id="boton66">Click para desvanecer un elemento visible</button>
+        <br><br>
+        <div id="div2" style="width:80px;height:80px;background-color:fuchsia; "></div>
+        <hr>
+
+        <h1>ADDCLASS</h1>
+        <p id="parrafo3">Este es el parrafo 3</p>
+
+        <h1>before</h1>
+        <p>Click en el boton para insertar texto antes de la imagen.</p>
+        <img src="img src=down1.png" alt="jQuery">
+        <button onclick="beforeText()">Inserta antes</button>
+        <hr>
+
+        <h1>after</h1>
+        <p>Click en el boton para insertar texto despues de un parrafo</p>
+        <button id="botonafter">Inserta contenido al final</button>
+        <p>Este es un parrafo.</p>
+
+
+
+
+
+
+
+
+
+        <hr>
+        <h1>ATTR</h1>
+        <p id="parrafo4">Este es el parrafo 4</p>
+
+        <hr>
+        <h1>VAL</h1>
+        <input id="text1 " type="number "><input id="text2 " type="text ">
+        <button id="boton5 ">click para val</button> <button id="btnHtml ">funcion html  </button>
+    </div>
+    <hr>
+
+    < /body>
+
+</html>
