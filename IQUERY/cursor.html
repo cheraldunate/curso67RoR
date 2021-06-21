@@ -1,0 +1,69 @@
+<<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <title>cusor</title>
+        <style type="text/css">
+            #ninja-1 {
+                width: 250px;
+                height: auto;
+                margin: 2px solid black;
+            }
+            
+            #ninja-2 {
+                width: 250px;
+                height: auto;
+            }
+            
+            #ninja-3 {
+                width: 250px;
+                height: auto;
+            }
+            
+            #ninja-4 {
+                width: 250px;
+                height: auto;
+            }
+        </style>
+        <script>
+            $(document).ready(function() {
+                var srci = "";
+
+                $('img').hover(function() {
+                        srci = $(this).attr("src");
+                        console.log("SRC : " + srci);
+                        $(this).attr("src", "img/cat5.png");
+
+                    },
+                    function() {
+                        $(this).attr("src", srci);
+                    });
+            });
+        </script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <img id="ninja-1" src="img/ninja0.png" alt="Ninja 1">
+                </div>
+                <div class="col">
+                    <img id="ninja-2" src="img/ninja1.png" alt="Ninja 2">
+                </div>
+                <div class="col">
+                    <img id="ninja-3" src="img/ninja2.png" alt="Ninja 3">
+                </div>
+                <div class="col">
+                    <img id="ninja-4" src="img/ninja3.png" alt="Ninja 4">
+                </div>
+            </div>
+        </div>
+    </body>
+
+    </html>
