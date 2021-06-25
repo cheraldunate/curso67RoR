@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+    <style>
+        #info {
+            border-radius: 3px;
+            border: midnightblue solid 5px;
+            background-color: mistyrose;
+            width: 200px;
+            margin: 20px auto;
+        }
+        
+        #dat {
+            margin: 0 auto;
+            padding-top: 80px;
+            text-align: center;
+        }
+        
+        #container {
+            border-color: black solid 3px;
+            background: url("https://www.viajarafrancia.com/wp-content/uploads/2014/10/clima-1-760x500.jpg");
+            border: 3px solid blue;
+            height: 500px;
+            width: 760px;
+        }
+        
+        #ciudad {
+            background-color: rgb(221, 207, 202);
+        }
+        
+        button {
+            margin-top: 20px;
+            border: greenyellow solid 1px;
+        }
+        
+        img {
+            opacity: 50%;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function() {
+            $('button').click(function() {
+
+                var ciudad = $('#ciudad').val(); //obtener el valor del elemento (input) 
+                var url = 'https://api.openweathermap.org/data/2.5/weather?q=' + ciudad + '&appid=9a3c1b752b7c362097f022f8a88620aa';
+
+                $.ajax({ //busca en una api info en formato JASON.
+                    url: url, //donde busca
+                    success: function(datos) { //cuando encuentra los datos se ejecuta
+                        console.dir(datos);
+                        $('#info').attr('style', 'opacity:0.8');
+                        $('#info').html('');
+                        $('#info').append('<p>ciudad : ' + datos.name + '</p>');
+                        $('#info').append('<p>longitud : ' + datos.coord.lon + '</p>');
+                        $('#info').append('<p>latitud : ' + datos.coord.lat + '</p>');
+                        $('#info').append('<p>temperatura : ' + datos.main.temp + '</p>');
+                        $('#info').append('<p>cielos : ' + datos.weather[0].main + '</p>');
+                        $('#info').append('<p>descripcion : ' + datos.weather[0].description + '</p>');
+                        $('#info').append('<p>grados celcius : ' + Math.round(datos.main.temp - 273.15) + '</p>');
+                    },
+                    error: function() { //en caso de no encontrar datos
+                        console.log("no se recibe info");
+                        $('#info').html('');
+                        $('#info').append('<p> no se encuentra ciudad  </p>');
+                    }
+                });
+
+
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="container">
+
+        <div id="dat">
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" name="ciudad" id="ciudad">
+            <button>Consultar</button>
+        </div>
+        <div id="info" style="opacity:0">
+        </div>
+
+    </div>
+</body>
+
+
+</html>
