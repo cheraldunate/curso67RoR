@@ -1,0 +1,92 @@
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    h3 {
+        color: ghostwhite;
+    }
+    
+    .listado {
+        text-decoration: underline;
+    }
+    
+    p {
+        color: cornsilk;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 80%;
+    }
+    
+    h1 {
+        color: cornsilk;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 200%;
+    }
+    
+    #container {
+        height: 600px;
+        width: 970PX;
+        background-color: cornflowerblue;
+        border-color: black;
+        margin-left: 20px;
+        margin-top: 20PX;
+        padding: 15px;
+    }
+    
+    #header {
+        height: 60px;
+        width: 950PX;
+        background-color: rgb(235, 55, 23);
+        border-radius: 10px;
+        padding: 10px;
+    }
+    
+     ::marker {
+        color: floralwhite;
+    }
+    
+    #navigation {
+        height: 200px;
+        width: 150PX;
+        background-color: rgb(91, 136, 161);
+        border-radius: 20px;
+        padding: 20px 30px;
+        margin: 10px;
+        display: inline-block;
+        vertical-align: top;
+    }
+    
+    a {
+        color: rgb(60, 107, 107);
+        font-size: 100%;
+    }
+    
+    li {
+        color: white;
+        font-size: 80%;
+    }
+    
+    #submenu {
+        padding-left: 40px;
+        list-style-type: none;
+    }
+    
+    #main_content {
+        height: 400px;
+        width: 600PX;
+        background-color: rgb(29, 30, 31);
+        border-radius: 20px;
+        padding: 20px 70px 20px 40px;
+        margin: 10px;
+        display: inline-block;
+    }
+    
+    #footer {
+        height: 20px;
+        width: 900PX;
+        background-color: rgb(125, 128, 131);
+        border-radius: 10px;
+        padding: 20px 30px;
+        margin: 10px;
+        display: inline-block;
+    }

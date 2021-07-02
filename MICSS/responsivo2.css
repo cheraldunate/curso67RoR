@@ -53,6 +53,9 @@
 }
 
 @media only screen and (max-width: 480px) {
+    #header {
+        padding: 7%;
+    }
     #navigation {
         display: none;
     }
@@ -73,23 +76,20 @@
         vertical-align: auto;
         margin: 2%;
     }
-    #header {
-        padding: 7%;
-    }
 }
 
 @media only screen and (min-width: 481px) and (max-width:1023px) {
     #navigation {
         display: none;
     }
+    #maincontent {
+        width: 98%;
+        height: auto;
+    }
     .cuboamarillo {
         width: 48%;
     }
     #rectangulomorado {
         width: auto;
-    }
-    #maincontent {
-        width: 98%;
-        height: auto;
     }
 }
