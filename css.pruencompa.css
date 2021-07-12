@@ -1,0 +1,156 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#navm {
+    background: linear-gradient(180deg, grey, black, grey);
+    height: 40px;
+}
+
+h4 {
+    float: right;
+    padding-right: 20px;
+    padding-top: 30px;
+}
+
+#logo {
+    color: white;
+}
+
+#princi {
+    width: 1023px;
+    height: auto;
+}
+
+#flogo {
+    padding: 20px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+h3 {
+    color: orange;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+h2 {
+    display: inline-block;
+    font-size: 17px;
+    padding-top: 7px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+ul {
+    display: inline-block;
+    color: white;
+}
+
+li {
+    margin-left: 10px;
+    font-size: 15px;
+    list-style-type: none;
+    display: inline-block;
+    padding-left: 20px;
+    padding-top: 7px;
+    border-left: 2px solid grey;
+}
+
+.container {
+    width: 1024px;
+    height: 1200px;
+    background-color: #1a1a1a;
+    margin: 20px;
+}
+
+.fotito {
+    display: inline-block;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 6px;
+    background-color: orange;
+    color: white;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.herm {
+    width: 200px;
+    display: inline-block;
+    color: white;
+    padding-top: 20px;
+}
+
+.four {
+    width: 230px;
+    display: inline-block;
+    color: white;
+    padding-left: 15px;
+}
+
+.dfoto {
+    padding-top: 30px;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.borde {
+    border: 3px solid grey;
+}
+
+.back {
+    color: gray;
+    float: right;
+    margin-right: 30px;
+}
+
+#texto {
+    display: inline-block;
+    color: white;
+    width: 700px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+#boton {
+    display: inline-block;
+    padding-top: 15px;
+    padding-right: 10px;
+    float: right;
+}
+
+#biden {
+    padding-top: 30px;
+    padding-left: 20px;
+    background: repeating-linear-gradient(-45deg, #111111 0 0.5px, black 2px 4px);
+    margin-top: 50px;
+    min-height: 130px;
+}
+
+#cuatro {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+#blanc {
+    font-size: 14px;
+    color: white;
+    display: inline-block;
+    padding: 10px;
+}
+
+#naran {
+    font-size: 10px;
+    color: orange;
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 840px;
+}
