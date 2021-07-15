@@ -19,12 +19,27 @@ def adivina_numero valor #miusculas y separadaspor _
     end
 end 
 
+
+
 adivina_numero 23
 adivina_numero 25
 adivina_numero 27
 
     # tu código aquí
 
+def adivina_numero valor
+        number = 25
+        # tu código aquí
+        if valor == number
+            puts "¡Lo conseguiste!"
+        elsif valor > number
+            puts "¡La suposición fue demasiado alta!"
+        elsif valor < number
+            puts "¡La suposición fue demasiado baja!"
+        end 
+    end 
+    
+    adivina_numero(26)
 
 
     
