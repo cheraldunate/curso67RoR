@@ -45,10 +45,9 @@ puts otra.nombre #falla por que no existe el metodo nombre
 otra.apellido = "Yamada"
 puts otra.inspect #muestra el nombre de la variable 
 puts otra.apellido #muestra el nombre de la variable de instancia
-
-
 otra.email = "cher@gmail.com"
 puts otra.email
+
 
 
 
